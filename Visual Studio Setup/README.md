@@ -1,2 +1,2 @@
-# ECE 17 Discussion
+# Visual Studio Setup
  
