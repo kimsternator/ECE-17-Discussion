@@ -85,3 +85,19 @@
 //
 //	return 0;
 //}
+
+//#include <iostream>
+//#include <sstream>
+//#include <string>
+//
+//int main() {
+//	std::string theWords = "Hello, I am a word!";
+//	std::stringstream theStream(theWords);
+//
+//	int count = 0;
+//	std::string word;
+//	while (theStream >> word) {
+//		count++;
+//	}
+//	std::cout << count << std::endl; // outputs 5
+//}
