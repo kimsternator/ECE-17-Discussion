@@ -93,3 +93,12 @@
     Copy and paste the contents of the **NewSettings.json** provided in this repo.
 
     **Note**: We will be updating this file throughout the quarter.
+
+## Github Installation
+
+You will also need to install Github. Follow these instructions to install Github
+
+
+https://github.com/git-guides/install-git
+
+I recommend installing Github Desktop if you're not familiar with github command-line.
