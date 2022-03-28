@@ -1,0 +1,13 @@
+{
+    "sonarlint.rules": {
+      "cpp:S5025": {
+        "level": "Off"
+      },
+      "cpp:S106": {
+        "level": "Off"
+      },
+      "cpp:S1709": {
+        "level": "Off"
+      }
+    }
+  }
