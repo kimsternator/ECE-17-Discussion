@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Visual Studio Setup", "Visu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Streams", "Streams\Streams.vcxproj", "{C10E5382-555C-42A7-A558-58DFB4699F1F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Discussion 1", "Discussion 1\Discussion 1.vcxproj", "{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{C10E5382-555C-42A7-A558-58DFB4699F1F}.Release|x64.Build.0 = Release|x64
 		{C10E5382-555C-42A7-A558-58DFB4699F1F}.Release|x86.ActiveCfg = Release|Win32
 		{C10E5382-555C-42A7-A558-58DFB4699F1F}.Release|x86.Build.0 = Release|Win32
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Debug|x64.ActiveCfg = Debug|x64
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Debug|x64.Build.0 = Debug|x64
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Debug|x86.ActiveCfg = Debug|Win32
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Debug|x86.Build.0 = Debug|Win32
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Release|x64.ActiveCfg = Release|x64
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Release|x64.Build.0 = Release|x64
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Release|x86.ActiveCfg = Release|Win32
+		{A712B8FB-7D0B-40E6-BC43-5275E08F2AA2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
