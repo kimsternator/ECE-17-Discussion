@@ -8,6 +8,9 @@
       },
       "cpp:S1709": {
         "level": "Off"
+      },
+      "cpp:S582": {
+        "level": "Off"
       }
     }
   }
