@@ -11,6 +11,12 @@
       },
       "cpp:S582": {
         "level": "Off"
-      }
+      },
+      "cpp:S5020": {
+        "level": "Off"
+      },
+      "cpp:S1709": {
+        "level": "Off"
+      },
     }
   }
