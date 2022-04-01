@@ -15,7 +15,16 @@
       "cpp:S5020": {
         "level": "Off"
       },
-      "cpp:S1709": {
+      "cpp:S3656": {
+        "level": "Off"
+      },
+      "cpp:S4963": {
+        "level": "Off"
+      },
+      "cpp:S3490": {
+        "level": "Off"
+      },
+      "cpp:S3230": {
         "level": "Off"
       },
     }
