@@ -27,5 +27,17 @@
       "cpp:S3230": {
         "level": "Off"
       },
+      "cpp:S6005": {
+        "level": "Off"
+      },
+      "cpp:S5945": {
+        "level": "Off"
+      },
+      "cpp:S6045": {
+        "level": "Off"
+      },
+      "cpp:S5421": {
+        "level": "Off"
+      },
     }
   }
