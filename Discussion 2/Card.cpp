@@ -10,30 +10,34 @@
 
 namespace ECE17 {
 
-  Card::Card(Faces aFace, Suits aSuit) {
-    face=aFace;
-    suit=aSuit;
-  }
+	Card::Card(Faces aFace, Suits aSuit) {
+		face = aFace;
+		suit = aSuit;
+	}
 
-  Card::Card(const Card &aCopy) {
-    *this=aCopy;
-  }
+	/* 
+	Notice here that we are using the 
+	assignment operator instead of copying our code
+	*/
+	Card::Card(const Card& aCopy) {
+		*this = aCopy;
+	}
 
-  Card::~Card() {}
-  
-  Card& Card::operator=(const Card& aCopy) {
-    face=aCopy.face;
-    suit=aCopy.suit;
-    return *this;
-  }
+	Card::~Card() {}
 
-  bool Card::operator==(const Card& aCopy) const {
-    return (face==aCopy.face) && (suit==aCopy.suit);
-  }
+	Card& Card::operator=(const Card& aCopy) {
+		face = aCopy.face;
+		suit = aCopy.suit;
+		return *this;
+	}
 
-  std::ostream& operator<<(std::ostream &anOutput, const Card &aCard) {
-    anOutput << (int)aCard.face << (char)aCard.suit << "\n";
-    return anOutput;
-  }
+	bool Card::operator==(const Card& aCopy) const {
+		return (face == aCopy.face) && (suit == aCopy.suit);
+	}
+
+	std::ostream& operator<<(std::ostream& anOutput, const Card& aCard) {
+		anOutput << (int)aCard.face << (char)aCard.suit << "\n";
+		return anOutput;
+	}
 
 }

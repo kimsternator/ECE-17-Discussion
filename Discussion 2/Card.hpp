@@ -13,31 +13,40 @@
 #include <string>
 
 namespace ECE17 {
+	/*
+	Enums gives an extra security in using these values
+	Ex: mispelling clubs as Clubs
+	*/
+	enum class Suits
+		: char {
+		clubs = 'C', diamonds = 'D', hearts = 'H', spades = 'S'
+	};
+	// Enum of card faces using number values 2-14
+	enum class Faces
+		: int {
+		two = 2, three, four, five, six, seven, eight,
+		nine, ten, jack, queen, king, ace /*14*/
+	};
 
-  enum class Suits
-    : char {clubs='C', diamonds='D', hearts='H', spades='S'};
+	class Card {
+	public:
+		// Parameterized Constructor
+		Card(Faces aFace = Faces::ace, Suits aSuit = Suits::clubs);
+		// Copy Constructor
+		Card(const Card& aCopy);
+		// Destructor
+		~Card();
+		// Assignment Operator
+		Card& operator=(const Card& aCopy);
+		bool  operator==(const Card& aCopy) const;
 
-  enum class Faces
-    : int {two=2, three, four, five, six, seven, eight,
-           nine, ten, jack, queen, king, ace /*14*/};
-    
-  class Card {
-  public:
-    
-    Card(Faces aFace=Faces::ace, Suits aSuit=Suits::clubs);
-    Card(const Card &aCopy);
-    ~Card();
-    
-    Card& operator=(const Card& aCopy);
-    bool  operator==(const Card& aCopy) const;
-            
-    //this method will print the card to output stream
-    friend std::ostream& operator<<(std::ostream &anOutput,
-                                    const Card &aCard);
-    
-    Suits suit;
-    Faces face;
-  };
+		//this method will print the card to output stream
+		friend std::ostream& operator<<(std::ostream& anOutput,
+										const Card& aCard);
+
+		Suits suit;
+		Faces face;
+	};
 
 }
 
