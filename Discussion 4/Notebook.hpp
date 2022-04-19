@@ -5,6 +5,7 @@
 #pragma once
 
 #include <vector>
+#include <iostream>
 #include <string>
 
 struct Page {
@@ -12,12 +13,18 @@ struct Page {
 	int pageNum;
 };
 
+// Tags (1 byte) to differentiate similar overloads
+struct Index {};
+struct PageNum {};
+
+using PageList = std::vector<Page>;
+
 class Notebook {
 public:
 	// Default Constructor
 	Notebook();
 	// Parameter Constructor
-	Notebook(std::vector<Page> pages);
+	Notebook(PageList pages);
 	// Destructor
 	~Notebook();
 	// Copy Constructor
@@ -30,17 +37,40 @@ public:
 	Page& operator[](size_t anIndex);
 
 	// Function Overloading
-	bool remove(size_t anIndex);
-	bool remove(Page aPage);
+	bool remove(int anIndex, Index);
+	// remove index anIndex
+	bool remove(int aPageNum, PageNum);
 
 	// General Functions
 	bool insert(Page aPage);
-	bool contains(Page aPage);
-	size_t find(Page aPage);
-	size_t pages();
+	bool contains(const Page& aPage) const;
+	int find(const Page& aPage) const;
+	size_t pages() const;
 
 private:
 	std::vector<Page> _pages;
 };
 
+class LabeledNotebook : public Notebook {
+public:
+	std::string title;
+};
+
 #endif _NOTEBOOK
+
+/*
+public
+public - public
+protected -protected
+private - private
+
+protected
+public - protected
+protected - protected
+private - private
+
+private
+public - private
+protected - private
+private - private
+*/
