@@ -16,8 +16,6 @@ int main() {
         Page{"Three", 3}
     }};
 
-    
-
     // Calls default constructor
     Notebook aNotebook;
     // parameter
