@@ -4,6 +4,7 @@
 #include <utility>
 #include <string>
 
+// Forward Declaration
 class KeyValue;
 
 class IKeyValueVisitor {
@@ -34,7 +35,7 @@ public:
 		return { key, value };
 	}
 
-	std::string to_string() {
+	std::string to_string() const {
 		return std::to_string(key) + "->" + std::to_string(value);
 	}
 

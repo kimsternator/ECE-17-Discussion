@@ -24,7 +24,7 @@ public:
 
 	size_t size() const {
 		return stack.size();
-	}
+	}	
 
 	void printStack(std::ostream& anOutput) const {
 		for (auto& item : stack) {
@@ -32,10 +32,22 @@ public:
 		}
 		anOutput << "\n";
 	}
+	// LIFO - Last in first out
+	// push_back
+	// Defined the back of the vector to be the top of the
+	// stack
+	void push(T aValue) {
+		stack.push_back(aValue);
+	}
 
-	void push(T aValue);
-	T peek();
-	void pop();
+	T peek() {
+		return stack[size() - 1];
+	}
+
+	void pop() {
+		stack.erase(stack.begin() + size() - 1)
+	}
+
 
 
 private:

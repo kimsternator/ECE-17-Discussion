@@ -2,8 +2,8 @@
 #include <algorithm>
 
 /*
-Visitor Pattern
 Building Stack/Queue using vector
+Visitor Pattern
 */
 
 #include "KeyValue.hpp"
@@ -27,10 +27,10 @@ void queueExample() {
     theQueue.push(new KeyValue(3, 4));
     theQueue.push(new KeyValue(5, 6));
     theQueue.push(new KeyValue(7, 8));
-    theQueue.printQueue(std::cout);
+    //theQueue.printQueue(std::cout);
 
-    /*QueueKVVisitor theVisitor(std::cout);
-    theQueue.visitWith(theVisitor);*/
+    QueueKVVisitor theVisitor(std::cout);
+    theQueue.visitWith(theVisitor);
 }
 
 bool KVcallback(const KeyValue& aKV) {
@@ -52,7 +52,7 @@ void visitorPatternExample() {
 
 int main() {
     //queueExample();
-    visitorPatternExample();
+    //visitorPatternExample();
 
     return 0;
 }
