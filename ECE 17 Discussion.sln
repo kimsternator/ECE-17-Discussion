@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Discussion 5", "Discussion 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PA3 Walkthrough", "PA3 Walkthrough\PA3 Walkthrough.vcxproj", "{B2101F7C-D4E1-47A5-B7C7-AC9530EC2ECE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Discussion 6", "Discussion 6\Discussion 6.vcxproj", "{811F8870-2139-4A0A-82D8-FA7D6DE56002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{B2101F7C-D4E1-47A5-B7C7-AC9530EC2ECE}.Release|x64.Build.0 = Release|x64
 		{B2101F7C-D4E1-47A5-B7C7-AC9530EC2ECE}.Release|x86.ActiveCfg = Release|Win32
 		{B2101F7C-D4E1-47A5-B7C7-AC9530EC2ECE}.Release|x86.Build.0 = Release|Win32
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Debug|x64.ActiveCfg = Debug|x64
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Debug|x64.Build.0 = Debug|x64
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Debug|x86.ActiveCfg = Debug|Win32
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Debug|x86.Build.0 = Debug|Win32
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Release|x64.ActiveCfg = Release|x64
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Release|x64.Build.0 = Release|x64
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Release|x86.ActiveCfg = Release|Win32
+		{811F8870-2139-4A0A-82D8-FA7D6DE56002}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
