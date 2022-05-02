@@ -39,5 +39,38 @@
       "cpp:S5421": {
         "level": "Off"
       },
+      "cpp:S3776": {
+        "level": "Off"
+      },
+      "cpp:S5827": {
+        "level": "Off"
+      },
+      "cpp:AssignmentInSubExpression": {
+        "level": "Off"
+      },
+      "cpp:S134": {
+        "level": "Off"
+      },
+      "cpp:S5008": {
+        "level": "Off"
+      },
+      "cpp:S1232": {
+        "level": "Off"
+      },
+      "cpp:S2259": {
+        "level": "Off"
+      },
+      "cpp:CommentedCode": {
+        "level": "Off"
+      },
+      "cpp:S1231": {
+        "level": "Off"
+      },
+      "cpp:S1066": {
+        "level": "Off"
+      },
+      "cpp:SwitchWithoutDefault": {
+        "level": "Off"
+      },
     }
   }
