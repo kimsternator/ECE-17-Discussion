@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+#include <utility>
+#include <string>
+
 class KeyValue;
 
 class IKeyValueVisitor {
@@ -25,6 +29,14 @@ public:
 	~KeyValue() = default;
 
 	KeyValue& operator=(const KeyValue& aCopy) = default;
+
+	std::pair<int, int> getKV() const {
+		return { key, value };
+	}
+
+	std::string to_string() {
+		return std::to_string(key) + "->" + std::to_string(value);
+	}
 
 	friend std::ostream& operator<<(std::ostream& anOutput, const KeyValue& aKV) {
 		anOutput << aKV.key << "->" << aKV.value;

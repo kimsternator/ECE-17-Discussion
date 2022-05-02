@@ -33,20 +33,9 @@ public:
 		anOutput << "\n";
 	}
 
-	void push(T aValue) {
-		queue.push_back(aValue);
-	}
-
-	T peek() {
-		return *(queue.front());
-	}
-	void pop() {
-		if (queue.empty()) {
-			return;
-		}
-		
-		queue.erase(queue.begin());
-	}
+	void push(T aValue) {}
+	T peek() { return T(); }
+	void pop() {}
 
 	Queue& visitWith(IKeyValueVisitor& aVisitor) {
 		for (auto item : queue) {

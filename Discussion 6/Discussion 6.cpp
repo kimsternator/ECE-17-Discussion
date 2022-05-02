@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 /*
 Visitor Pattern
@@ -20,7 +21,7 @@ private:
     std::ostream& output;
  };
 
-int main() {
+void queueExample() {
     Queue<KeyValue*> theQueue;
     theQueue.push(new KeyValue(1, 2));
     theQueue.push(new KeyValue(3, 4));
@@ -30,5 +31,28 @@ int main() {
 
     /*QueueKVVisitor theVisitor(std::cout);
     theQueue.visitWith(theVisitor);*/
+}
+
+bool KVcallback(const KeyValue& aKV) {
+    return aKV.getKV() == std::pair<int, int>{5, 6};
+}
+
+void visitorPatternExample() {
+    std::vector<KeyValue> theVec = {
+        KeyValue(1, 2),
+        KeyValue(3, 4),
+        KeyValue(5, 6),
+        KeyValue(7, 8),
+        KeyValue(9, 10)
+    };
+
+    auto iter = std::find_if(theVec.begin(), theVec.end(), KVcallback);
+    std::cout << (iter == theVec.end() ? "Not found" : (*iter).to_string());
+}
+
+int main() {
+    //queueExample();
+    visitorPatternExample();
+
     return 0;
 }
