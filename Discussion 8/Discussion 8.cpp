@@ -34,7 +34,7 @@ public:
         return *ptr;
     }
 
-    T& operator*() {
+    T& operator*() const {
         return *ptr;
     }
     
@@ -42,34 +42,6 @@ protected:
     T* ptr;
 };
 
-template <typename T>
-void saveVector(std::vector<T>& aVec) {
-
-}
-
-template <typename T>
-void readVector(std::vector<T>& aVec) {
-}
-
-template <typename T>
-void printVector(std::vector<T>& aVec) {
-    for (auto& e : aVec) {
-        std::cout << e << " ";
-    }
-}
-
-int main() {
-    std::vector<int> theVec = { 1, 2, 3, 4 };
-    saveVector(theVec);
-    std::vector<int> theReadVec;
-    readVector(theReadVec);
-    printVector(theReadVec);
-    return 0;
-}
-
-
-
-/*
 template <typename T>
 void saveVector(std::vector<T>& aVec) {
     std::ofstream file;
@@ -101,5 +73,25 @@ void printVector(std::vector<T>& aVec) {
     for (auto& e : aVec) {
         std::cout << e << " ";
     }
+    std::cout << std::endl;
 }
+
+/*
+1) unique_ptr
+2) shared_ptr
+3) weak_ptr
 */
+
+int main() {
+    std::vector<int> theVec = { 1, 2, 3, 4 };
+    saveVector(theVec);
+    std::cout << "Before Writing: \n";
+    printVector(theVec);
+
+    std::vector<int> theReadVec;
+    readVector(theReadVec);
+    std::cout << "After Reading: \n";
+    printVector(theReadVec);
+
+    return 0;
+}
