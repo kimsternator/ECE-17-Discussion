@@ -154,8 +154,8 @@ int main() {
     */
 
     // Lambda Function
-    std::vector<Node<int>> theVec;
+    /*std::vector<Node<int>> theVec;
     std::sort(theVec.begin(), theVec.end(), [](const Node<int>& aLeft, const Node<int>& aRight) {
         return !(aLeft.value < aRight.value);
-    });
+    });*/
 }
