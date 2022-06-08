@@ -9,12 +9,12 @@
 namespace ECE17 {
 
     enum class Suits : char {
-        clubs = 'C', diamonds = 'D', hearts = 'H', spades = 'S'
+        clubs = 'C', diamonds = 'D', hearts = 'H', spades = 'S', joker = 'J'
     };
 
     enum class Faces : int {
         noface = 0, two = 2, three, four, five, six, seven, eight,
-        nine, ten, jack = 11, queen = 12, king = 13, ace = 14
+        nine, ten, jack = 11, queen = 12, king = 13, ace = 14, joker = 100
     };
 
     class Card {

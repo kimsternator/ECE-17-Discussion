@@ -16,7 +16,7 @@
 namespace ECE17 {
 
 	enum class HandRanks {
-		unknown = 0, high_card, one_pair, two_pair, three_kind, straight,
+		unknown = 0, high_card, one_pair, two_pair, three_kind, odds, evens, straight,
 		flush, full_house, four_kind, straight_flush, royal_flush
 	};
 

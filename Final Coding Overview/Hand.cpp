@@ -91,6 +91,6 @@ namespace ECE17 {
 	}
 
 	HandRanks Hand::determineRank() const {
-		return HandRankUtil::dispatch(cards);
+		return HandRankUtil::evaluate(cards);
 	}
 }

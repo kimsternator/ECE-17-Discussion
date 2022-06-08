@@ -1,5 +1,8 @@
 #pragma once
 
+#include <random>
+#include <ctime>
+
 #include "Hand.hpp"
 
 using std::cout; using std::endl;
@@ -47,7 +50,19 @@ namespace ECE17 {
 			theHand.addCard(Card(theFace, Suits::clubs));
 			theHand.addCard(Card(Faces::six, Suits::spades));
 			theHand.addCard(Card(Faces::six, Suits::diamonds));
-			theHand.addCard(Card(Faces::queen, Suits::hearts));
+			theHand.addCard(Card(Faces::jack, Suits::hearts));
+			return theHand;
+		}
+
+		static Hand getTwoPairJoker() {
+			Hand theHand;
+			static Faces theFaces[] = { Faces::two, Faces::four };
+			Faces theFace = static_cast<Faces>(theFaces[rand() % 2]);
+			theHand.addCard(Card(theFace, Suits::hearts));
+			theHand.addCard(Card(theFace, Suits::clubs));
+			theHand.addCard(Card(Faces::six, Suits::spades));
+			theHand.addCard(Card(Faces::six, Suits::diamonds));
+			theHand.addCard(Card(Faces::joker, Suits::joker));
 			return theHand;
 		}
 
@@ -58,7 +73,7 @@ namespace ECE17 {
 			theHand.addCard(Card(theFace, Suits::hearts));
 			theHand.addCard(Card(theFace, Suits::diamonds));
 			theHand.addCard(Card(theFace, Suits::spades));
-			theHand.addCard(Card(Faces::eight, Suits::clubs));
+			theHand.addCard(Card(Faces::nine, Suits::clubs));
 			theHand.addCard(Card(Faces::ten, Suits::clubs));
 			return theHand;
 		}
@@ -136,6 +151,16 @@ namespace ECE17 {
 		}
 
 		static Hand getFlush(Suits aSuit = Suits::clubs) {
+			Hand theHand;
+			theHand.addCard(Card(Faces::two, aSuit));
+			theHand.addCard(Card(Faces::five, aSuit));
+			theHand.addCard(Card(Faces::eight, aSuit));
+			theHand.addCard(Card(Faces::jack, aSuit));
+			theHand.addCard(Card(Faces::five, aSuit));
+			return theHand;
+		}
+
+		static Hand getFlushJoker(Suits aSuit = Suits::clubs) {
 			Hand theHand;
 			theHand.addCard(Card(Faces::two, aSuit));
 			theHand.addCard(Card(Faces::five, aSuit));
@@ -255,7 +280,7 @@ namespace ECE17 {
 			}
 
 			if (getFullHouse(Faces::five).determineRank() != HandRanks::full_house &&
-				getFullHouseJoker().determineRank() != HandRanks::full_house) {
+				getFullHouseJoker(Faces::five).determineRank() != HandRanks::full_house) {
 				theResult = false;
 				cout << "Error on Full House" << endl;
 			}
@@ -272,14 +297,14 @@ namespace ECE17 {
 				cout << "Error on Flush" << endl;
 			}
 
-			if (getEven().determineRank() != HandRanks::even &&
-				getEvenJoker().determineRank() != HandRanks::even) {
+			if (getEven().determineRank() != HandRanks::evens &&
+				getEvenJoker().determineRank() != HandRanks::evens) {
 				theResult = false;
 				cout << "Error on Even" << endl;
 			}
 
-			if (getOdd().determineRank() != HandRanks::odd &&
-				getOddJoker().determineRank() != HandRanks::odd) {
+			if (getOdd().determineRank() != HandRanks::odds &&
+				getOddJoker().determineRank() != HandRanks::odds) {
 				theResult = false;
 				cout << "Error on Odd" << endl;
 			}
@@ -290,7 +315,8 @@ namespace ECE17 {
 				cout << "Error on Three of a Kind" << endl;
 			}
 
-			if (getTwoPair().determineRank() != HandRanks::two_pair) {
+			if (getTwoPair().determineRank() != HandRanks::two_pair &&
+				getTwoPairJoker().determineRank() != HandRanks::full_house) {
 				theResult = false;
 				cout << "Error on Two Pair" << endl;
 			}
@@ -312,6 +338,5 @@ namespace ECE17 {
 
 			return theResult;
 		}
-
 	};
 }

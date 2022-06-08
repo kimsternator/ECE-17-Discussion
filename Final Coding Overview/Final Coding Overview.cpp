@@ -4,7 +4,9 @@
 #include "NewTesting.hpp"
 
 int main() {
-    ECE17::OldTesting::oldTests();
+    //ECE17::OldTesting::oldTests();
+
+    ECE17::NewTesting::newTests();
 }
 
 
@@ -24,6 +26,7 @@ New Hands:
 1) Evens
 2) Odds
 
+Assumption: at most 1 joker card
 New Rankings
 1. Royal flush
 2. Straight flush
@@ -33,8 +36,10 @@ New Rankings
 7. Straight
 8. Evens
 9. Odds
-10. Three of a kind
-11. Two pair
-12. One Pair
-13. High Card
+
+
+10. Three of a kind => Four of a Kind
+11. Two pair => full house
+12. One Pair => Three of kind, {dependent: Evens, Odds}
+13. High Card => One Pair, {dependent: straight, flush, Evens, Odds}
 */
