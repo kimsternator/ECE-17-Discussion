@@ -138,6 +138,7 @@ namespace ECE17 {
 
 			for (int i = (int) HandRanks::high_card; i != (int) HandRanks::three_kind + 1; i++) {
 				HandRanks currentRank = static_cast<HandRanks>(i);
+				currentRank = SmAD[currentRank](cards);
 				if ((int) currentRank > (int) theMaxHand) {
 					theMaxHand = currentRank;
 				}
